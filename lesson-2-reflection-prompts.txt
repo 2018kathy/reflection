@@ -1,0 +1,62 @@
+    
+
+What happens when you initialize a repository? Why do you need to do it?
+
+   git: ls -a # show hidden document with -a 
+        git init # create a repository
+		git log 
+		git status # to show which files have changed since the last commit 
+		
+
+How is the staging area different from the working directory and the repository?
+What value do you think it offers?
+
+        git add cake-recipe.txt
+		git add frosting-recipe.txt #add file to staging area 
+		git reset cake-recipe.txt   #remove file from staging area 
+		
+
+How can you use the staging area to make sure you have one commit per logical
+change?
+
+        git commit
+		git commit -m "commit message"
+		
+		git diff # to check the difference between directory and staging area
+		git diff --stage # check the difference between commit and staging area 
+        git reset --hard #discard any changes in working directory or staging area 
+		git checkout master
+
+What are some situations when branches would be helpful in keeping your history
+organized? How would branches help?
+
+        git branch #show branch 
+		git branch easy-mode # create easy-mode branch
+		git checkout easy-mode # switch to easy-mode branch
+
+How do the diagrams help you visualize the branch structure?
+
+        git log --graph --oneline master coin
+		
+		
+		
+
+What is the result of merging two branches together? Why do we represent it in
+the diagram the way we do?
+
+        git checkout -b new_branch_name # equivilent to 
+		                                # git branch new_branch_name 
+										#&git checkout new_branch_name 
+		git gc # delete unreachable commits
+		
+		git branch
+		git checkout master  
+		git merge master coins
+		
+		git show id # show different of id and its parent without knowing its parent
+        git branch -d coins 
+
+What are the pros and cons of Git's automatic merging vs. always doing merges
+manually?
+
+
