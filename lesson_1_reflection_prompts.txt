@@ -1,0 +1,80 @@
+cd ~                          # change directories to your home directory
+mkdir version-control         # make version-control directory
+cd version-control            # go to version-control directory
+mkdir reflections             # create reflections directory
+cd reflections                # go to reflections directory
+subl lesson_1_reflections.txt # launch sublime with file called lesson_1_reflections.txt 
+                              # (you can replace subl with another editor here if you prefer a different one)
+pwd # print working directory - shows what directory you are in
+ls  # list the files in this directory
+
+
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    Command Prompt:  FC game_old.js game_new.js
+	Git Bash: diff -u game_old.js game_new.js
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    saving manual copies
+	dropbox
+	google doc 
+	wikipedia
+	Git: git log
+	     git diff ID1 ID2
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+     Git: One Commit per Logical Changes
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    git log --stat
+	q #quit reviewing the log
+    git diff id1 id2	
+
+How can you use the commands git log and git diff to view the history of files?
+
+    Cloning a Repository
+      To clone a repository, run git clone followed by a space and the repository URL.
+    Asteroids URL
+      Use the following url to clone the Asteroids repository: https://github.com/udacity/asteroids.git
+    Exiting git log
+      To stop viewing git log output, press q (which stands for quit).
+    Getting Colored Output
+      To get colored diff output, run git config --global color.ui auto
+	  
+	git clone  https://github.com/udacity/asteroids.git
+	cd asteroids
+	git log --stat
+	git diff first_id second_id
+	git config --global color.ui auto
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    git checkout id #change to the commit with the id
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    cd ~
+	mv downloads/git-completion.bash.txt git-completion.bash
+	mv downloads/git-prompt.sh.txt git-promt.sh
+	mv downloads/bash_profile_course .bash_profile
+	
+	git config --global core.editor "'C:/Program Files/Sublime Text 2/sublime_text.exe' -n -w"
+    mv .bash_profile bash_profile
+	copy to .bash_profile: alias subl="C:/Program\ Files/Sublime\ Text\ 2/sublime_text.exe"
+	mv bash_profile .bash_profile
+	
+	run sublime: C:/Program\ Files/Sublime\ Text\ 2/sublime_text.exe
+	
+	git config --global push.default upstream
+    git config --global merge.conflictstyle diff3
+	
+	run sublime: subl .bash_profile
