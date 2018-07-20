@@ -23,7 +23,7 @@ change?
 		git commit -m "commit message"
 		
 		git diff # to check the difference between directory and staging area
-		git diff --stage # check the difference between commit and staging area 
+		git diff --staged # check the difference between commit and staging area 
         git reset --hard #discard any changes in working directory or staging area 
 		git checkout master
 
@@ -38,25 +38,29 @@ How do the diagrams help you visualize the branch structure?
 
         git log --graph --oneline master coin
 		
+		git checkout -b new_branch_name # equivilent to 
+		                                # git branch new_branch_name 
+										#&git checkout new_branch_name
 		
-		
-
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
-        git checkout -b new_branch_name # equivilent to 
-		                                # git branch new_branch_name 
-										#&git checkout new_branch_name 
-		git gc # delete unreachable commits
+         
+		git gc # delete unreachable commits, sometimes automatically in git 
 		
 		git branch
 		git checkout master  
 		git merge master coins
 		
 		git show id # show different of id and its parent without knowing its parent
-        git branch -d coins 
+        git branch -d coins # delete branch coins 
 
 What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
 
+diagramming tools
+https://www.gliffy.com/
+https://yuml.me/diagram/activity/draw
 
+        git log -n 1 # to show n=1 log 
+		
